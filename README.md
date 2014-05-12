@@ -3,16 +3,16 @@ Homepage
 
 ![alt tag](screenshots/preview.png "Homepage preview")
 
-**[Live Demo](http://gokoururi.github.io/homepage/)**
+**[Live Demo](http://xender.github.io/homepage/)**
 
 This repository contains a custom homepage made using html, css and javascript (node.js). Feel free to download and modify. Comments and suggestions appreciated. Please don't expect too much.
 
 Features:
 * Flashy links
 * Flashy Slidy sublinks
-* Flashy Slidy searchbars 
+* Flashy Slidy searchbars
 * Randomly selected cute 2D girls
-* **New**: Column style links. See [Live Demo](http://gokoururi.github.io/homepage/)
+* **New**: Column style links. See [Live Demo](http://xender.github.io/homepage/)
 
 Generate your own!
 ----
