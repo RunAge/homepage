@@ -1,0 +1,4 @@
+#!/bin/sh
+gen/jsonize-config &&
+pystache gen/home.html.mustache home.json > home.html &&
+pystache gen/style.css.mustache home.json > style.css

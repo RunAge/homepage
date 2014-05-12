@@ -14,6 +14,13 @@ Features:
 * Randomly selected cute 2D girls
 * **New**: Column style links. See [Live Demo](http://gokoururi.github.io/homepage/)
 
+Generate your own!
+----
+To make editing easier, this fork has Mustache templates and generator scripts included.
+Just edit home.yaml and re-run gen/generate script to make your own version.
+
+This will overwrite home.html and style.css files, so don't edit them manually or deal with preserving manual modifications in some way (like commiting and rebasing them).
+
 Customizing and adding mascots
 ----
 

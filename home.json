@@ -1,0 +1,130 @@
+{
+	"title": "Welcome Home",
+	"links": {
+		"columns": [
+			{
+				"color": "purple",
+				"name": "Resources",
+				"items": [
+					{
+						"url": "https://drive.google.com/folderview?id=0B_VmbVyD4eT3N1VUbGN4Wjd5OVE",
+						"name": "Cute 2D Girls"
+					},
+					{
+						"url": "https://developer.mozilla.org//",
+						"name": "MDN"
+					},
+					{
+						"url": "https://wiki.installgentoo.com/",
+						"name": "Install Gentoo"
+					}
+				]
+			},
+			{
+				"color": "green",
+				"name": "4chon",
+				"items": [
+					{
+						"url": "http://boards.4chan.org/v/",
+						"name": "Video Games"
+					},
+					{
+						"url": "http://boards.4chan.org/vg/",
+						"name": "Video Game General"
+					},
+					{
+						"url": "http://boards.4chan.org/g/",
+						"name": "Technology"
+					},
+					{
+						"url": "http://boards.4chan.org/jp/",
+						"name": "Otaku Culture"
+					}
+				]
+			},
+			{
+				"color": "pink",
+				"name": "Animution",
+				"items": [
+					{
+						"url": "http://bakabt.me",
+						"name": "Bakabt"
+					},
+					{
+						"url": "http://www.nyaa.se/",
+						"name": "Nyaa"
+					},
+					{
+						"url": "http://utw.me",
+						"name": "UTW"
+					},
+					{
+						"url": "http://mazuisubs.com",
+						"name": "Mazui"
+					}
+				]
+			}
+		],
+		"buttons": [
+			{
+				"color": "green",
+				"url": "http://github.com/gokoururi/homepage",
+				"name": "Github"
+			},
+			{
+				"color": "grey",
+				"url": "#",
+				"name": "Gelbooru"
+			},
+			{
+				"color": "grey",
+				"sublinks": [
+					{
+						"url": "#",
+						"name": "When I hold you"
+					},
+					{
+						"url": "#",
+						"name": "In my Arms"
+					},
+					{
+						"url": "#",
+						"name": "You are my duchess"
+					},
+					{
+						"url": "#",
+						"name": "Of earl"
+					}
+				],
+				"url": "#",
+				"arrow": true,
+				"name": "Duke of Earl"
+			}
+		],
+		"searchboxes": [
+			{
+				"url": "https://google.com/search",
+				"parameter": "q",
+				"autofocus": true,
+				"name": "Google",
+				"class": "google"
+			},
+			{
+				"url": "https://youtube.com/results",
+				"class": "youtube",
+				"name": "Youtube",
+				"parameter": "search_query"
+			},
+			{
+				"url": "https://en.wikipedia.org/w/index.php",
+				"icon": "wikipedia.jpg",
+				"class": "wikipedia",
+				"name": "Wikipedia (en)",
+				"parameter": "search"
+			}
+		]
+	},
+	"header": "Welcome to the Internet, ",
+	"name": "Goshujin-sama",
+	"subtitle": "Its not like I like you or anything"
+}

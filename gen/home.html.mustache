@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--    Copyright 2014 gokoururi
+        This work is free. You can redistribute it and/or modify it under the
+        terms of the Do What The Fuck You Want To Public License, Version 2,
+        as published by Sam Hocevar. See the COPYING file for more details. -->
+<html>
+    <head>
+        <title>{{title}}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta charset="utf-8">
+        <link rel="icon" href="images/ruri.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon" />
+        <link rel="stylesheet" style="text/css" href="style.css" title="Eve2" />
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+    </head>
+    <body>
+        <main> <!-- Random mascot image will be set as background-image by javascript -->
+        {{#links}}
+            <header>
+                <h1>{{header}}<span class="highlite">{{name}}</span></h1>
+                <p class="subtitle">{{subtitle}}</p>
+            </header>
+            <section class="searchContainer">
+            {{#searchboxes}}
+                <form class="searchForm" method="get" action="{{url}}">
+                    <input class="searchBar search_{{class}}" type="text" name="{{parameter}}" placeholder="{{name}}"{{#autofocus}} autofocus="autofocus"{{/autofocus}} search_/>
+                </form>
+            {{/searchboxes}}
+            </section>
+            <nav>
+                <ul class="buttonList">
+                    {{#buttons}}
+                    <li class="button button_{{color}}{{#arrow}} buttonArrow{{!TODO change CSS to react for children ul or make mustache to cast list to bool for not repeating the class}}{{/arrow}}">{{!\n}}<a href="{{url}}">{{name}}</a>{{!\n}}{{#arrow}}
+                        <ul>
+                            {{#sublinks}}
+                            <li><a href="{{url}}">{{name}}</a></li>
+                            {{/sublinks}}
+                        </ul>
+                    {{/arrow}}{{!\n}}</li>
+                    {{/buttons}}
+                </ul>
+                <ul class="columnList">
+                    {{#columns}}
+                    <li class="column column_{{color}}">
+                        <a>{{name}}</a>
+                        <ul>
+                        {{#items}}
+                            <li><a href="{{url}}">{{name}}</a></li>
+                        {{/items}}
+                        </ul>
+                    </li>
+                    {{/columns}}
+                </ul>
+            </nav>
+        {{/links}}
+        </main>
+    </body>
+</html>
