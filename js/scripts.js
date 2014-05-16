@@ -45,6 +45,11 @@ $(document).ready(function(event) {
         controlMascot(mascot, mascotMinWidth);
     } else { removeMascot(); }
 
+    // Optional animations disabling
+    if(config.no_reflow) {
+        $('body').addClass("disableAnimations");
+    }
+
     // Render templates
     var $templates = $('script[type=x-tmpl-mustache]');
     for (var i = 0; i < $templates.length; ++i) {
