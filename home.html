@@ -9,10 +9,58 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta charset="utf-8">
         <link rel="icon" href="images/ruri.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon" />
+
         <link rel="stylesheet" style="text/css" href="general.css" />
-        <link rel="stylesheet" style="text/css" href="themes/dark/colors.css" />
+
+        <!-- 3rd party libraries. -->
+        <script type="text/javascript" src="js/mustache.js-0.8.1/mustache.js"></script>
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+        <!-- Page scripts. -->
+        <script type="text/javascript" src="config.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
+
+        <!-- TODO Check whether using that x-tmpl-mustache "custom MIME" is sane. -->
+        <!-- TODO Maybe just put those in places where they should be instantiated and substitute their parent's .html() instead of using data- attribute? -->
+
+        <!-- Searchboxes template. -->
+        <script type="x-tmpl-mustache" data-target-selector=".searchContainer">
+        {{#searchboxes}}
+            <form class="searchForm" method="get" action="{{url}}">
+                <input class="searchBar search_{{class}}" type="text" name="{{parameter}}" placeholder="{{name}}"{{#autofocus}} autofocus="autofocus"{{/autofocus}} search_/>
+            </form>
+        {{/searchboxes}}
+        </script>
+
+        <!-- Buttons template. -->
+        <script type="x-tmpl-mustache" data-target-selector=".buttonList">
+        {{#buttons}}
+            <li class="button button_{{color}}{{#arrow}} buttonArrow{{!TODO change CSS to react for children ul or make mustache to cast list to bool for not repeating the class}}{{/arrow}}">
+                <a href="{{url}}">{{name}}</a>
+            {{#arrow}}
+                <ul>
+                    {{#sublinks}}
+                    <li><a href="{{url}}">{{name}}</a></li>
+                    {{/sublinks}}
+                </ul>
+            {{/arrow}}
+            </li>
+        {{/buttons}}
+        </script>
+
+        <!-- Columns template. -->
+        <script type="x-tmpl-mustache" data-target-selector=".columnList">
+        {{#columns}}
+            <li class="column column_{{color}}">
+                <a>{{name}}</a>
+                <ul>
+                {{#items}}
+                    <li><a href="{{url}}">{{name}}</a></li>
+                {{/items}}
+                </ul>
+            </li>
+        {{/columns}}
+        </script>
     </head>
     <body>
         <main> <!-- Random mascot image will be set as background-image by javascript -->
@@ -21,56 +69,14 @@
                 <p class="subtitle">Its not like I like you or anything</p>
             </header>
             <section class="searchContainer">
-                <form class="searchForm" method="get" action="https://google.com/search">
-                    <input class="searchBar search_google" type="text" name="q" placeholder="Google" autofocus="autofocus" search_/>
-                </form>
-                <form class="searchForm" method="get" action="https://youtube.com/results">
-                    <input class="searchBar search_youtube" type="text" name="search_query" placeholder="Youtube" search_/>
-                </form>
-                <form class="searchForm" method="get" action="https://en.wikipedia.org/w/index.php">
-                    <input class="searchBar search_wikipedia" type="text" name="search" placeholder="Wikipedia (en)" search_/>
-                </form>
+                <!-- Here go templated searchboxes. -->
             </section>
             <nav>
                 <ul class="buttonList">
-                    <li class="button button_green"><a href="http://github.com/gokoururi/homepage">Github</a></li>
-                    <li class="button button_grey"><a href="#">Gelbooru</a></li>
-                    <li class="button button_grey buttonArrow"><a href="#">Duke of Earl</a>
-                        <ul>
-                            <li><a href="#">When I hold you</a></li>
-                            <li><a href="#">In my Arms</a></li>
-                            <li><a href="#">You are my duchess</a></li>
-                            <li><a href="#">Of earl</a></li>
-                        </ul>
-                    </li>
+                    <!-- Here go templated buttons. -->
                 </ul>
                 <ul class="columnList">
-                    <li class="column column_purple">
-                        <a>Resources</a>
-                        <ul>
-                            <li><a href="https://drive.google.com/folderview?id=0B_VmbVyD4eT3N1VUbGN4Wjd5OVE">Cute 2D Girls</a></li>
-                            <li><a href="https://developer.mozilla.org//">MDN</a></li>
-                            <li><a href="https://wiki.installgentoo.com/">Install Gentoo</a></li>
-                        </ul>
-                    </li>
-                    <li class="column column_green">
-                        <a>4chon</a>
-                        <ul>
-                            <li><a href="http://boards.4chan.org/v/">Video Games</a></li>
-                            <li><a href="http://boards.4chan.org/vg/">Video Game General</a></li>
-                            <li><a href="http://boards.4chan.org/g/">Technology</a></li>
-                            <li><a href="http://boards.4chan.org/jp/">Otaku Culture</a></li>
-                        </ul>
-                    </li>
-                    <li class="column column_pink">
-                        <a>Animution</a>
-                        <ul>
-                            <li><a href="http://bakabt.me">Bakabt</a></li>
-                            <li><a href="http://www.nyaa.se/">Nyaa</a></li>
-                            <li><a href="http://utw.me">UTW</a></li>
-                            <li><a href="http://mazuisubs.com">Mazui</a></li>
-                        </ul>
-                    </li>
+                    <!-- Here go templated columns. -->
                 </ul>
             </nav>
         </main>

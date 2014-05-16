@@ -26,10 +26,16 @@ function removeMascot() {
     $('main').addClass("plain");
 }
 
+var theme_dir = "themes/" + config.theme;
+
+// Theme setup
+$('head').append('<link rel="stylesheet" style="text/css" href="'+theme_dir+'/colors.css" />'); //TODO ensure this gets done as fast as possible to avoid blinking while loading page.
+$.getScript(theme_dir+"/mascots.js");
+
 $(document).ready(function(event) {
+    //Theme setup
     var mascotEnable    = true;
-    var mascotPath      = "themes/dark/images/mascots/"
-    var mascotList      = [ 'ruri1.png', 'ruri2.png', 'ruri3.png' ];
+    var mascotPath      = theme_dir+"/images/mascots/"
 
     var mascot          = mascotPath + mascotList[Math.floor(Math.random() * mascotList.length)];
     var mascotMinWidth  = '750';
@@ -38,4 +44,13 @@ $(document).ready(function(event) {
         setMascot(mascot);
         controlMascot(mascot, mascotMinWidth);
     } else { removeMascot(); }
+
+    // Render templates
+    var $templates = $('script[type=x-tmpl-mustache]');
+    for (var i = 0; i < $templates.length; ++i) {
+        var tmpl_script = $templates[i];
+        var $target = $(tmpl_script.dataset.targetSelector);
+        var tmpl = $(tmpl_script).html();
+        $target.html( Mustache.render(tmpl, config.links) );
+    }
 });
