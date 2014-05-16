@@ -1,9 +1,12 @@
 Homepage
 ====
 
+This is my fork of [Ruri homepage](https://github.com/gokoururi/homepage).
+Also check out upstream's version. ^ ^
+
 ![alt tag](screenshots/preview.png "Homepage preview")
 
-**Live Demo: [Dark](http://gokoururi.github.io/homepage/) - [Light](http://gokoururi.github.io/homepage/index-light.html)**
+**[Live Demo (upstream version, dark theme)](http://gokoururi.github.io/homepage/)**
 
 This repository contains a custom homepage made using html, css and javascript (node.js). Feel free to download and modify. Comments and suggestions appreciated. Please don't expect too much.
 
@@ -13,18 +16,20 @@ Features:
 * Flashy Slidy searchbars
 * Randomly selected cute 2D girls
 * Column style links.
-* **New**: Light color theme. See [Live Demo](http://gokoururi.github.io/homepage/index-light.html)
+* Dark and light color themes.
+* **New**: Javascript (JSON) configurated.
 
-Customizing and adding mascots
+Customizing, adding mascots and themes
 ----
 
-To customize mascots modify the following values in [javascript](js/scripts.js):
+To customize links, edit the [config](config.js).
 
+To customize mascots for `dark` theme, modify array in [themes/dark/mascots.js](themes/dark/mascots.js):
 ```javascript
-    var mascotEnable    = true;
-    var mascotPath      = "images/mascots/"
-    var mascotList      = [ 'ruri1.png', 'ruri2.png', 'ruri3.png' ];
+var mascotList = [ "ruri1.png", "ruri2.png", "ruri3.png" ];
 ```
+
+To add own theme, copy an existing one, change mascots and [colors.css](themes/dark/colors.css).
 
 Disclaimer
 ----
