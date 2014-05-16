@@ -1,11 +1,11 @@
 var config = {
-	"title"    : "Welcome Home",
+	"title"       : "Welcome Home",
 
-	"theme"    : "dark",
+	"header"      : "Welcome to the Internet, ",
+	"name"        : "Goshujin-sama",
+	"subtitle"    : "Its not like I like you or anything",
 
-	"header"   : "Welcome to the Internet, ",
-	"name"     : "Goshujin-sama",
-	"subtitle" : "Its not like I like you or anything",
+	"theme"       : "dark",
 
 	"links" : {
 		"searchboxes" : [
