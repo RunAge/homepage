@@ -35,15 +35,15 @@
         <!-- Buttons template. -->
         <script type="x-tmpl-mustache" data-target-selector=".buttonList">
         {{#buttons}}
-            <li class="button button_{{color}}{{#arrow}} buttonArrow{{!TODO change CSS to react for children ul or make mustache to cast list to bool for not repeating the class}}{{/arrow}}">
+            <li class="button button_{{color}}{{#sublinks.length}} buttonArrow{{/sublinks.length}}">
                 <a href="{{url}}">{{name}}</a>
-            {{#arrow}}
+            {{#sublinks.length}}
                 <ul>
                     {{#sublinks}}
                     <li><a href="{{url}}">{{name}}</a></li>
                     {{/sublinks}}
                 </ul>
-            {{/arrow}}
+            {{/sublinks.length}}
             </li>
         {{/buttons}}
         </script>

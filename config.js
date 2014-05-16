@@ -46,7 +46,6 @@ var config = {
 				"name"  : "Duke of Earl",
 				"url"   : "#",
 				"color" : "grey",
-				"arrow" : true,
 				"sublinks" : [
 					{
 						"name" : "When I hold you",
