@@ -30,17 +30,18 @@ var theme_dir = "themes/" + config.theme;
 
 // Theme setup
 $('head').append('<link rel="stylesheet" style="text/css" href="'+theme_dir+'/colors.css" />'); //TODO ensure this gets done as fast as possible to avoid blinking while loading page.
-$.getScript(theme_dir+"/mascots.js");
+
+if(config.mascots){
+    $.getScript(theme_dir+"/mascots.js");
+}
 
 $(document).ready(function(event) {
-    //Theme setup
-    var mascotEnable    = true;
-    var mascotPath      = theme_dir+"/images/mascots/"
+    // Mascot setup
+    if ( config.mascots ) {
+        var mascotPath      = theme_dir+"/images/mascots/"
+        var mascot          = mascotPath + mascotList[Math.floor(Math.random() * mascotList.length)];
+        var mascotMinWidth  = 750;
 
-    var mascot          = mascotPath + mascotList[Math.floor(Math.random() * mascotList.length)];
-    var mascotMinWidth  = '750';
-
-    if ( mascotEnable ) {
         setMascot(mascot);
         controlMascot(mascot, mascotMinWidth);
     } else { removeMascot(); }

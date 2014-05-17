@@ -6,6 +6,8 @@ var config = {
 	"subtitle"    : "Its not like I like you or anything",
 
 	"theme"       : "dark",
+
+	"mascots"     : true,
 	"no_reflow"   : false, // Disables [most of] animations.
 
 	"links" : {
