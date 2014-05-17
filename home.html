@@ -23,18 +23,27 @@
         <!-- TODO Check whether using that x-tmpl-mustache "custom MIME" is sane. -->
         <!-- TODO Maybe just put those in places where they should be instantiated and substitute their parent's .html() instead of using data- attribute? -->
 
+        <!-- Title template. -->
+        <script type="x-tmpl-mustache" data-target-selector="title">{{title}}</script>
+
+        <!-- Header template. -->
+        <script type="x-tmpl-mustache" data-target-selector="header">
+            <h1>{{header}}<span class="highlite">{{name}}</span></h1>
+            <p class="subtitle">{{subtitle}}</p>
+        </script>
+
         <!-- Searchboxes template. -->
         <script type="x-tmpl-mustache" data-target-selector=".searchContainer">
-        {{#searchboxes}}
+        {{#links.searchboxes}}
             <form class="searchForm" method="get" action="{{url}}">
                 <input class="searchBar search_{{class}}" type="text" name="{{parameter}}" placeholder="{{name}}"{{#autofocus}} autofocus="autofocus"{{/autofocus}} search_/>
             </form>
-        {{/searchboxes}}
+        {{/links.searchboxes}}
         </script>
 
         <!-- Buttons template. -->
         <script type="x-tmpl-mustache" data-target-selector=".buttonList">
-        {{#buttons}}
+        {{#links.buttons}}
             <li class="button button_{{color}}{{#sublinks.length}} buttonArrow{{/sublinks.length}}">
                 <a href="{{url}}">{{name}}</a>
             {{#sublinks.length}}
@@ -45,12 +54,12 @@
                 </ul>
             {{/sublinks.length}}
             </li>
-        {{/buttons}}
+        {{/links.buttons}}
         </script>
 
         <!-- Columns template. -->
         <script type="x-tmpl-mustache" data-target-selector=".columnList">
-        {{#columns}}
+        {{#links.columns}}
             <li class="column column_{{color}}">
                 <a>{{name}}</a>
                 <ul>
@@ -59,15 +68,12 @@
                 {{/items}}
                 </ul>
             </li>
-        {{/columns}}
+        {{/links.columns}}
         </script>
     </head>
     <body>
         <main> <!-- Random mascot image will be set as background-image by javascript -->
-            <header>
-                <h1>Welcome to the Internet, <span class="highlite">Goshujin-sama</span></h1>
-                <p class="subtitle">Its not like I like you or anything</p>
-            </header>
+            <header></header>
             <section class="searchContainer">
                 <!-- Here go templated searchboxes. -->
             </section>

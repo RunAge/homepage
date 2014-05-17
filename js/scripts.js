@@ -57,6 +57,6 @@ $(document).ready(function(event) {
         var tmpl_script = $templates[i];
         var $target = $(tmpl_script.dataset.targetSelector);
         var tmpl = $(tmpl_script).html();
-        $target.html( Mustache.render(tmpl, config.links) );
+        $target.html( Mustache.render(tmpl, config) );
     }
 });
