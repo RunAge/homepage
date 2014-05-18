@@ -42,18 +42,6 @@ h1 {
 .searchBar:focus {
     color: rgba(100,100,100,1);
 }
-.search_google {
-    background-image: url('images/icons/google.png');
-}
-
-.search_youtube {
-    background-image: url('images/icons/youtube.png');
-}
-
-.search_wikipedia {
-    background-image: url('images/icons/wikipedia.jpg');
-    background-size: 21px 21px;
-}
 
 /* Grey button */
 .button_grey > a,

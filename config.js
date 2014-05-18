@@ -14,20 +14,19 @@ var config = {
 		"searchboxes" : [
 			{
 				"name"      : "Google",
-				"class"     : "google",
+				"icon"      : "google.png",
 				"url"       : "https://google.com/search",
 				"parameter" : "q",
 				"autofocus" : true
 			},
 			{
 				"name"      : "Youtube",
-				"class"     : "youtube",
+				"icon"      : "youtube.png",
 				"url"       : "https://youtube.com/results",
 				"parameter" : "search_query"
 			},
 			{
 				"name"      : "Wikipedia (en)",
-				"class"     : "wikipedia",
 				"icon"      : "wikipedia.jpg",
 				"url"       : "https://en.wikipedia.org/w/index.php",
 				"parameter" : "search"
