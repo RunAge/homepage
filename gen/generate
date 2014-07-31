@@ -1,0 +1,3 @@
+#!/bin/sh
+gen/jsonize-config.py &&
+pystache gen/home.html.mustache home.json > home.html
