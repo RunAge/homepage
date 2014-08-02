@@ -41,7 +41,7 @@
             <nav>
                 <ul class="buttonList">
                 {{#buttons}}
-                    <li class="button button_{{color}} {{#has_sublinks}}buttonArrow{{!TODO change CSS to react for children ul or make mustache to cast list to bool for not repeating the class}}{{/has_sublinks}}">
+                    <li class="button button_{{color}} {{#has_sublinks}}buttonArrow{{/has_sublinks}}">
                         <a href="{{url}}">{{name}}</a>
                     {{#has_sublinks}}
                         <ul>
