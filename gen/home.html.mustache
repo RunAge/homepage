@@ -29,8 +29,8 @@
             <section class="searchContainer">
             {{#searchboxes}}
                 <form class="searchForm" method="get" action="{{url}}">
-                    <input type="text"
-                        class       = "searchBar search_{{class}}"
+                    <input type="text" class="searchBar"
+                        style       = "background-image: url('themes/{{theme}}/images/icons/{{icon}}')"
                         name        = "{{parameter}}"
                         placeholder = "{{name}}"
                         {{#autofocus}}autofocus="autofocus"{{/autofocus}}
