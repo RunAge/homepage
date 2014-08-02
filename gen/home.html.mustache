@@ -19,7 +19,7 @@
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/mascots-control.js"></script>
     </head>
-    <body>
+    <body {{#no_reflow}}class="disableAnimations"{{/no_reflow}}>
         <main> <!-- Random mascot image will be set as background-image by javascript -->
             <header>
                 <h1>{{header}}<span class="name-highlight">{{name}}</span></h1>

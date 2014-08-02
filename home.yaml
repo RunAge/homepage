@@ -6,6 +6,8 @@ subtitle    : Its not like I like you or anything
 
 theme       : ruri-dark
 
+no_reflow   : false # Disables [most of] animations.
+
 links:
     searchboxes :
         -
