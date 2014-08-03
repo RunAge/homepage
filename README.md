@@ -16,6 +16,13 @@ Features:
 * **New**: Light color theme. See [Live Demo](http://gokoururi.github.io/homepage/index-light.html)
   * New directory structure for easier making and sharing themes.
 
+Generate your own!
+----
+To make editing easier, this fork has Mustache templates and generator scripts included.
+Just edit home.yaml and re-run gen/generate script to make your own version.
+
+This will overwrite home.html file, so don't edit it manually or deal with preserving manual modifications in some way (like diff-patch).
+
 Customizing, adding mascots and themes
 ----
 To change current theme, replace its name in [home.html](home.html#L15-17)
