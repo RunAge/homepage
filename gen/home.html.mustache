@@ -10,14 +10,16 @@
 
         <link rel="stylesheet" style="text/css" href="general.css" />
 
-        <!-- To change theme, replace its name in following 4 lines  -->
+        <!-- To change theme, replace its name in following lines  -->
         <link rel="icon"                           href="themes/{{theme}}/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon" />
         <link rel="stylesheet" style="text/css"    href="themes/{{theme}}/colors.css" />
+    {{#mascots}}
         <script type="text/javascript">var mascotPath = "themes/{{theme}}/images/mascots/";</script>
         <script type="text/javascript"              src="themes/{{theme}}/mascots.js"></script>
 
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/mascots-control.js"></script>
+    {{/mascots}}
     </head>
     <body {{#no_reflow}}class="disableAnimations"{{/no_reflow}}>
         <main> <!-- Random mascot image will be set as background-image by javascript -->

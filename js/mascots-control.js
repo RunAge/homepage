@@ -27,13 +27,9 @@ function removeMascot() {
 }
 
 $(document).ready(function(event) {
-    var mascotEnable    = true;
-
     var mascot          = mascotPath + mascotList[Math.floor(Math.random() * mascotList.length)];
     var mascotMinWidth  = 750;
 
-    if ( mascotEnable ) {
-        setMascot(mascot);
-        controlMascot(mascot, mascotMinWidth);
-    } else { removeMascot(); }
+    setMascot(mascot);
+    controlMascot(mascot, mascotMinWidth);
 });
