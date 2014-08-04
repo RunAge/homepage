@@ -9,5 +9,6 @@ ack '{{([^!}]*)}}' ${1-gen/home.html.mustache} --output='$1' | perl -ne '
 
 		print "\t"x$i.$_;
 		$i += /^#/; # Opening tag
+		# $i += /^[#^]/; # Opening/"else" tag
 	}
 '
