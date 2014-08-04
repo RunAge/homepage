@@ -1,0 +1,13 @@
+#!/bin/zsh
+ack '{{([^!}]*)}}' ${1-gen/home.html.mustache} --output='$1' | perl -pe '
+	if(/^\//) { # Closing tag
+		--$i;
+		$x = 1;
+		$_ = "";
+	} else {
+		$t = /^#/; # Opening tag
+		$_ = ("\n"x$x).("\t"x$i).$_;
+		$i += $t;
+		$x = 0;
+	}
+'
